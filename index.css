@@ -1,0 +1,16 @@
+:root {
+    /* Color */
+    --priamary-yellow: hsl(47, 88%, 63%);
+    --primary-white: hsl(0, 0%, 100%);
+    --primary-grey: hsl(0, 0%, 50%);
+    --primary-black: hsl(0, 0%, 7%);
+    --clr-bodyBG: var(--priamary-yellow);
+    --clr-categoryBG: var(--priamary-yellow);
+    --clr-h1: var(--primary-black);
+    --clr-bodyText: var(--primary-grey);
+    --clr-categoryText: var(--primary-black);
+    --clr-border: var(--primary-black);
+    --clr-shadow: var(--primary-black);
+
+
+}
