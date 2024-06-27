@@ -1,16 +1,113 @@
+/* RESET */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body, h1, h2, p {
+    margin-block-end: 0;
+}
+
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+h1, h2 {
+    line-height: 1.1;
+    text-wrap: balance;
+}
+
+img, picture {
+    max-width: 100%;
+    display: block;
+}
+
 :root {
+    /* ---------- PRIMITIVES ----------*/
     /* Color */
-    --priamary-yellow: hsl(47, 88%, 63%);
-    --primary-white: hsl(0, 0%, 100%);
-    --primary-grey: hsl(0, 0%, 50%);
-    --primary-black: hsl(0, 0%, 7%);
-    --clr-bodyBG: var(--priamary-yellow);
-    --clr-categoryBG: var(--priamary-yellow);
-    --clr-h1: var(--primary-black);
-    --clr-bodyText: var(--primary-grey);
-    --clr-categoryText: var(--primary-black);
-    --clr-border: var(--primary-black);
-    --clr-shadow: var(--primary-black);
+    --primitive-yellow: hsl(47, 88%, 63%);
+    --primitive-white: hsl(0, 0%, 100%);
+    --primitive-grey: hsl(0, 0%, 50%);
+    --primitive-black: hsl(0, 0%, 7%);
+    /* Typography */
+    --fs-12To14: clamp(0.75rem, 0.7143rem + 0.1786vi, 0.875rem);
+    --fs-14To16: clamp(0.875rem, 0.8393rem + 0.1786vi, 1rem);
+    --fs-20To24: clamp(1.25rem, 1.1786rem + 0.3571vi, 1.5rem);
+    /* Font Weight */
+    --fw-500: 500;
+    --fw-900: 900;
 
+    /* ---------- TOKENS ---------- */
+    /* Color */
+    --clr-bodyBG: var(--primitive-yellow);
+    --clr-cardBG: var(--primitive-white);
+    --clr-categoryBG: var(--primitive-yellow);
+    --clr-cardTitle: var(--primitive-black);
+    --clr-bodyText: var(--primitive-grey);
+    --clr-categoryText: var(--primitive-black);
+    --clr-border: var(--primitive-black);
+    --clr-shadow: var(--primitive-black);
+    /* Typography */
+    --ff-figtree: 'Figtree';
+    --fs-category: var(--fs-12To14);
+    --fs-publishdate: var(--fs-12To14);
+    --fs-cardTitle: var(--fs-20To24);
+    --fs-cardDesc: var(--fs-14To16);
+    --fs-author: var(--fs-12To14);
+    /* Font Weight */
+    --fw-category: var(--fw-900);
+    --fw-publishdate: var(--fw-500);
+    --fw-cardTitle: var(--fw-900);
+    --fw-cardDesc: var(--fw-500);
+    --fw-author: var(--fw-500);
 
+}
+
+@font-face {
+    font-family: 'Figtree';
+    font-weight: 500 800;
+    font-style: normal;
+    src: url(./assets/fonts/Figtree-VariableFont_wght.woff2) format('woff2');
+}
+
+body {
+    font-family: 'Figtree';
+    background: var(--clr-bodyBG);
+
+    /* Centering the content for the Challenge */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 24rem;
+    padding: 1.5em;
+    background: var(--clr-cardBG);
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 8px 8px black;
+}
+
+.card img {
+    border-radius: 10px;
+}
+
+.card__content {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+}
+
+.category {
+    font-size: var(--fs-category);
+    font-weight: var(--fw-category);
+    width: fit-content;
+    padding: .75em .25em;
+    background: var(--clr-categoryBG);
+    border-radius: 4px;
 }
