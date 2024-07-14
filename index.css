@@ -160,7 +160,7 @@ a {
     gap: .75rem;
 }
 
-.author-info h2 {
+.author-info h4 {
     font-size: var(--fs-author);
     font-weight: var(--fw-author);
     color: var(--clr-author);
