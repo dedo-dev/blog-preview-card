@@ -50,12 +50,21 @@ In this Challenge I learn how to work with **Variable Fonts**, I make a muscle m
 
 ```html
   <article class="card">
-    <img height="200" class="card__img" src="/assets/images/illustration-article.svg" alt="Colured in yellow, black and white illustration of HTML element's">
+    <img
+      height="200"
+      class="card__img"
+      src="/assets/images/illustration-article.svg"
+      alt="Colured in yellow, black and white illustration of HTML element's"
+    >
     <div class="card__content">
       <span class="tag">Learning</span>
-      <time class="publishdate" datetime="2024-06-03" title="Published Dec 21, 2023">Published 21 Dec 2023</time>
+      <time class="publishdate" datetime="2024-06-03" title="Published Dec 21, 2023">
+        Published 21 Dec 2023
+      </time>
       <h1><a href="#" class="title">HTML & CSS foundations</a></h1>
-      <p class="description">These languages are the backbone of every website, defining structure, content, and presentation.</p>
+      <p class="description">
+        These languages are the backbone of every website, defining structure, content, and presentation.
+      </p>
     </div>
     <div class="author-info">
       <img width="32" height="32" src="/assets/images/image-avatar.webp" alt="Profile author picture">
