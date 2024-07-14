@@ -51,7 +51,12 @@ In this Challenge I learn how to work with **Variable Fonts**, I make a muscle m
 ```html
   <article class="card">
 <<<<<<< HEAD
-    <img height="200" class="card__img" src="/assets/images/illustration-article.svg" alt="Colorfull code elements illustration">
+    <img
+      height="200"
+      class="card__img"
+      src="/assets/images/illustration-article.svg"
+      alt="Colorfull code elements illustration"
+    >
 =======
     <img
       height="200"
