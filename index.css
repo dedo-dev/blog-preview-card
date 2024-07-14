@@ -82,10 +82,11 @@ body {
     color: var(--clr-bodyText);
 
     /* Centering content for the Challenge */
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
+    justify-content: center;
 }
 
 a {
@@ -103,12 +104,11 @@ a {
     border: 1px solid var(--clr-border);
     border-radius: 20px;
     box-shadow: 8px 8px var(--clr-shadow);
+    transition: all .35s ease;
 }
 
-@media (width >= 37.5em) {
-    .card {
-        box-shadow: 16px 16px var(--clr-shadow);
-    }
+.card:hover {
+    box-shadow: 16px 16px var(--clr-shadow);
 }
 
 .card__img {
@@ -169,6 +169,8 @@ a {
 .attribution {
     font-size: var(--fs-attribution);
     color: var(--primitive-black);
+    margin-block-start: auto;
+    text-align: center;
 }
 
 .attribution a {
