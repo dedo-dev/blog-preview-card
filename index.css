@@ -4,7 +4,7 @@
 }
 
 body, h1, h2, p {
-    margin-block-end: 0;
+    margin: 0;
 }
 
 body {
@@ -30,37 +30,43 @@ img, picture {
     --primitive-grey: hsl(0, 0%, 50%);
     --primitive-black: hsl(0, 0%, 7%);
     /* Typography */
+    /* Fluid */
     --fs-12To14: clamp(0.75rem, 0.7143rem + 0.1786vi, 0.875rem);
     --fs-14To16: clamp(0.875rem, 0.8393rem + 0.1786vi, 1rem);
     --fs-20To24: clamp(1.25rem, 1.1786rem + 0.3571vi, 1.5rem);
+    /* Fixed */
+    --fs-14: .875rem;
     /* Font Weight */
     --fw-500: 500;
-    --fw-900: 900;
+    --fw-800: 800;
 
     /* ---------- TOKENS ---------- */
     /* Color */
     --clr-bodyBG: var(--primitive-yellow);
     --clr-cardBG: var(--primitive-white);
-    --clr-categoryBG: var(--primitive-yellow);
+    --clr-tagBG: var(--primitive-yellow);
     --clr-cardTitle: var(--primitive-black);
+    --clr-cardTitleHover: var(--primitive-yellow);
     --clr-bodyText: var(--primitive-grey);
-    --clr-categoryText: var(--primitive-black);
+    --clr-publishdate: var(--primitive-black);
+    --clr-tagText: var(--primitive-black);
+    --clr-author: var(--primitive-black);
     --clr-border: var(--primitive-black);
     --clr-shadow: var(--primitive-black);
     /* Typography */
     --ff-figtree: 'Figtree';
-    --fs-category: var(--fs-12To14);
+    --fs-tag: var(--fs-12To14);
     --fs-publishdate: var(--fs-12To14);
     --fs-cardTitle: var(--fs-20To24);
     --fs-cardDesc: var(--fs-14To16);
-    --fs-author: var(--fs-12To14);
+    --fs-author: var(--fs-14);
+    --fs-attribution: var(--fs-12To14);
     /* Font Weight */
-    --fw-category: var(--fw-900);
+    --fw-tag: var(--fw-800);
     --fw-publishdate: var(--fw-500);
-    --fw-cardTitle: var(--fw-900);
+    --fw-cardTitle: var(--fw-800);
     --fw-cardDesc: var(--fw-500);
-    --fw-author: var(--fw-500);
-
+    --fw-author: var(--fw-800);
 }
 
 @font-face {
@@ -73,12 +79,17 @@ img, picture {
 body {
     font-family: 'Figtree';
     background: var(--clr-bodyBG);
+    color: var(--clr-bodyText);
 
-    /* Centering the content for the Challenge */
+    /* Centering content for the Challenge */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+}
+
+a {
+    text-decoration: none;
 }
 
 .card {
@@ -86,14 +97,22 @@ body {
     flex-direction: column;
     gap: 1.5rem;
     max-width: 24rem;
+    margin-inline: 1.5rem;
     padding: 1.5em;
     background: var(--clr-cardBG);
-    border: 1px solid black;
+    border: 1px solid var(--clr-border);
     border-radius: 20px;
-    box-shadow: 8px 8px black;
+    box-shadow: 8px 8px var(--clr-shadow);
 }
 
-.card img {
+@media (width >= 37.5em) {
+    .card {
+        box-shadow: 16px 16px var(--clr-shadow);
+    }
+}
+
+.card__img {
+    object-fit: cover;
     border-radius: 10px;
 }
 
@@ -103,11 +122,57 @@ body {
     gap: .75rem;
 }
 
-.category {
-    font-size: var(--fs-category);
-    font-weight: var(--fw-category);
+.tag {
+    font-size: var(--fs-tag);
+    font-weight: var(--fw-tag);
     width: fit-content;
-    padding: .75em .25em;
-    background: var(--clr-categoryBG);
+    padding: .25rem .75rem;
+    background: var(--clr-tagBG);
+    color: var(--clr-tagText);
     border-radius: 4px;
+}
+
+.publishdate {
+    font-size: var(--fs-publishdate);
+    font-weight: var(--fw-publishdate);
+    color: var(--clr-publishdate);
+}
+
+.title {
+    color: var(--clr-cardTitle);
+    font-size: var(--fs-cardTitle);
+    font-weight: var(--fw-cardTitle);
+}
+
+.title:hover {
+    cursor: pointer;
+    color: var(--clr-cardTitleHover);
+}
+
+.description {
+    font-size: var(--fs-cardDesc);
+    font-weight: var(--fw-cardDesc);
+}
+
+.author-info {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+}
+
+.author-info h2 {
+    font-size: var(--fs-author);
+    font-weight: var(--fw-author);
+    color: var(--clr-author);
+}
+
+.attribution {
+    font-size: var(--fs-attribution);
+    color: var(--primitive-black);
+}
+
+.attribution a {
+    color: var(--primitive-black);
+    font-weight: var(--fw-800);
+    text-decoration: underline;
 }

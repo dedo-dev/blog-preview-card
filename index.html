@@ -2,48 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="index.css">
   <title>Frontend Mentor | Blog preview card</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-
   <main>
     <section>
-      <div class="card">
-        <picture>
-          <img src="/assets/images/illustration-article.svg" alt="Colured in yellow, black and white illustration of HTML element's">
-        </picture>
+      <article class="card">
+        <img height="200" class="card__img" src="/assets/images/illustration-article.svg" alt="Colured in yellow, black and white illustration of HTML element's">
         <div class="card__content">
-          <!-- <div class="category"> -->
-            <span class="category">Learning</span>
-          <!-- </div> -->
-          <p class="publishdate">Published 21 Dec 2023</p>
+          <span class="tag">Learning</span>
+          <time class="publishdate" datetime="2024-06-03" title="Published Dec 21, 2023">Published 21 Dec 2023</time>
           <h1><a href="#" class="title">HTML & CSS foundations</a></h1>
           <p class="description">These languages are the backbone of every website, defining structure, content, and presentation.</p>
         </div>
-        <div class="card__author">
-          <picture>
-            <img src="/assets/images/image-avatar.webp" alt="Profile author picture">
-          </picture>
+        <div class="author-info">
+          <img width="32" height="32" src="/assets/images/image-avatar.webp" alt="Profile author picture">
           <h2>Greg Hooper</h2>
         </div>
-      </div>
+      </article>
     </section>
   </main>
-
   <footer class="attribution">
     <p>
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
+      Coded with ❤️ by <a href="https://www.linkedin.com/in/daniele-zeppieri-0b1a36252/" target="_blank">Daniele Zeppieri</a>.
     </p>
   </footer>
 </body>
