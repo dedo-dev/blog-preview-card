@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: (https://www.frontendmentor.io/solutions/blog-card-using-flexbox-logical-properties-and-fluid-typography-C3XGfD0rwK)
 - Live Site URL: [https://dz-blog-preview-card.vercel.app/]
 
 ## My process
