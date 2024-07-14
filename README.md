@@ -50,21 +50,12 @@ In this Challenge I learn how to work with **Variable Fonts**, I make a muscle m
 
 ```html
   <article class="card">
-<<<<<<< HEAD
     <img
       height="200"
       class="card__img"
       src="/assets/images/illustration-article.svg"
       alt="Colorfull code elements illustration"
     >
-=======
-    <img
-      height="200"
-      class="card__img"
-      src="/assets/images/illustration-article.svg"
-      alt="Colured in yellow, black and white illustration of HTML element's"
-    >
->>>>>>> 29227a7d7661a23f1198017d045793912ff11dfd
     <div class="card__content">
       <span class="tag">Learning</span>
       <time class="publishdate" datetime="2024-06-03" title="Published Dec 21, 2023">
