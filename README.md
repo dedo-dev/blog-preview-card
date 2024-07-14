@@ -30,7 +30,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Live Demo](https://dz-blog-preview-card.vercel.app/)
+- Live Site URL: [https://dz-blog-preview-card.vercel.app/]
 
 ## My process
 
