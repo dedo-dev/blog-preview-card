@@ -84,7 +84,7 @@ body {
     /* Centering content for the Challenge */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -169,6 +169,7 @@ a {
 .attribution {
     font-size: var(--fs-attribution);
     color: var(--primitive-black);
+    margin-inline-start: auto;
 }
 
 .attribution a {
