@@ -69,6 +69,19 @@ img, picture {
     --fw-author: var(--fw-800);
 }
 
+/* Centering content for the Challenge */
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    justify-items: center;
+}
+
+main {
+    align-self: center;
+}
+/* ---------------------------------- */
+
 @font-face {
     font-family: 'Figtree';
     font-weight: 500 800;
@@ -80,13 +93,6 @@ body {
     font-family: 'Figtree';
     background: var(--clr-bodyBG);
     color: var(--clr-bodyText);
-
-    /* Centering content for the Challenge */
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 a {
@@ -169,8 +175,6 @@ a {
 .attribution {
     font-size: var(--fs-attribution);
     color: var(--primitive-black);
-    margin-block-start: auto;
-    text-align: center;
 }
 
 .attribution a {
